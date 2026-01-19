@@ -1,15 +1,14 @@
 # Feedback Signal Aggregator
 **Cloudflare PM Intern Take-Home Assignment**
 
-
 A lightweight product feedback triage tool built on the Cloudflare Developer Platform.
 
-This project was created as part of a Product Manager Intern take-home assignment and focuses on turning noisy, unstructured feedback into decision-ready product signals.
+This project focuses on turning noisy, unstructured feedback into **decision-ready product signals**, rather than raw analytics.
 
 ---
 
 ## Live Demo
-👉 (https://green-mud-06d7.n12a8lagi.workers.dev/)
+👉 https://green-mud-06d7.n12a8lagi.workers.dev/
 
 ---
 
@@ -21,6 +20,7 @@ The goal is not perfect classification, but faster prioritization.
 ---
 
 ## Key Decision Signals
+
 The dashboard emphasizes four signals that help teams move from *reading feedback* to *making decisions*:
 
 1. **Delta (48h Volatility)**  
@@ -44,7 +44,7 @@ The dashboard emphasizes four signals that help teams move from *reading feedbac
 
 - **Workers AI**  
   Extracts structured signals from free-text feedback:
-  theme, severity, sentiment, segment, actionability score, and summary.
+  theme, severity, sentiment, user segment, actionability score, and summary.
 
 - **D1 (SQLite)**  
   Stores raw feedback alongside AI outputs for aggregation, debugging, and reproducibility.
@@ -53,5 +53,24 @@ All AI outputs are directional and intended for triage, not automated decisions.
 
 ---
 
+## Platform Tradeoffs
 
+- One AI call per feedback item prioritizes clarity over cost optimization.
+- AI outputs are stored alongside raw feedback to enable debugging and human override.
+- Feedback sources are mocked to stay within the assignment timebox.
 
+---
+
+## Vibe-Coding Context
+
+I used **Cursor** selectively to accelerate UI layout and visual hierarchy, allowing me to focus on product decisions, signal design, and tradeoff awareness rather than low-level CSS.
+
+Core logic, data modeling, and AI interactions were designed manually.
+
+---
+
+## Notes
+- Feedback ingestion is mocked for this prototype.
+- Designed to emphasize product judgment over completeness.
+
+ 
