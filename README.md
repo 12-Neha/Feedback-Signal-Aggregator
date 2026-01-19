@@ -55,6 +55,3 @@ All AI outputs are directional and intended for triage, not automated decisions.
 
 
 
-```bash
-npm install -g wrangler
-wrangler dev
